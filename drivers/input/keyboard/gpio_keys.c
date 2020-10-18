@@ -685,7 +685,6 @@ gpio_keys_get_devtree_pdata(struct device *dev)
 	struct gpio_keys_button *button;
 	struct fwnode_handle *child;
 	int nbuttons;
-	int id;
 
 #ifdef CONFIG_ZTE_FEATURE_SWAP_GPIO_KEYS
 	id = request_board_id();
