@@ -1663,7 +1663,7 @@ int xhci_bus_suspend(struct usb_hcd *hcd)
 		t2 = xhci_port_state_to_neutral(t1);
 
 
-		portsc_buf[port_index] = 0;
+		
 
 		/* Bail out if a USB3 port has a new device in link training */
 		if ((hcd->speed >= HCD_USB3) &&
