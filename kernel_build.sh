@@ -11,6 +11,12 @@ export ARCH=arm64
 export SUBARCH=arm64
 export DTC_EXT=dtc
 
+echo -e "${green}"
+echo "---------------------------------------"
+echo "Finding defconfig,setting up Toolchain:"
+echo "---------------------------------------"
+echo -e "${restore}" 
+
 make O=out ARCH=arm64 pine_defconfig
 
 PATH="${PWD}/bin:${PWD}/toolchain/bin:${PATH}" \
@@ -20,7 +26,7 @@ DATE_START=$(date +"%s")
 
 echo -e "${green}"
 echo "-----------------"
-echo "Making Kernel:"
+echo "Building Kernel:"
 echo "-----------------"
 echo -e "${restore}" 
 
