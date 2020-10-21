@@ -271,7 +271,7 @@ qdf_export_symbol(qdf_wake_lock_create);
  * QDF status failure: if wake lock was not acquired
  */
 
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 10, 0))
+
 QDF_STATUS qdf_wake_lock_acquire(qdf_wake_lock_t *lock, uint32_t reason)
 {
 	host_diag_log_wlock(reason, qdf_wake_lock_name(lock),
@@ -279,13 +279,6 @@ QDF_STATUS qdf_wake_lock_acquire(qdf_wake_lock_t *lock, uint32_t reason)
 			    WIFI_POWER_EVENT_WAKELOCK_TAKEN);
 	__pm_stay_awake(lock);
 
-	return QDF_STATUS_SUCCESS;
-}
-#else
-
-
-QDF_STATUS qdf_wake_lock_acquire(qdf_wake_lock_t *lock, uint32_t reason)
-{
 	return QDF_STATUS_SUCCESS;
 }
 qdf_export_symbol(qdf_wake_lock_acquire);
