@@ -35,9 +35,7 @@ make -j$(nproc --all) O=out \
                       CC=clang \
                       CLANG_TRIPLE=aarch64-linux-gnu- \
                       CROSS_COMPILE=aarch64-linux-android- | tee kernel.log
-                      
-# Kernel Details
-VER=".1.0.0.unified"  
+                       
 
 
 echo -e "${green}"
