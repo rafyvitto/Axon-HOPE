@@ -1,5 +1,5 @@
 To build this follow these steps
-1.git clone https://github.com/rafyvitto/android_kernel_zte_sm8150.git -b lineage-16.0
+1.git clone https://github.com/rafyvitto/ZTE-sm8150.git -b Axon-HOPE
 2.Download https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/android-9.0.0_r48/clang-4691093.tar.gz 
 3.Extract to you working folder
 4.git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 toolchain
